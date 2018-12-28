@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrounds"
+    tools:context=".Spash_Screen">
+
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignEnd="@+id/textview1"
+        android:layout_alignRight="@+id/textview1"
+        android:layout_alignTop="@+id/logo"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="33dp"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_menu_rotate"
+        android:id="@+id/retry"
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retry"
+        android:text="TAP TO RETRY"
+        android:gravity="center"
+        android:id="@+id/tapto"
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:onClick="retry"
+        />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:padding="40dp"
+        android:src="@drawable/sch" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/schoolianfont"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="-110dp"
+        android:id="@+id/sclFont"
+        android:padding="4dp"
+        android:alpha="0"
+
+        />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slogo"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"/>
+
+   <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/slogo"
+    android:textColor="#000"
+    android:text="A way to change school life"
+    android:textSize="25dp"
+    android:textStyle="bold"
+    android:layout_below="@+id/sclFont"
+    android:layout_centerHorizontal="true"
+       android:alpha="0"
+       />
+
+</RelativeLayout>

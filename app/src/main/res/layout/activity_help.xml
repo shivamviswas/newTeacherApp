@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help_NevActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/school"/>
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:text="help"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/detail1"
+        android:layout_below="@id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Schoolian is not only a mobile application, it a community for solve the problem and create an awesome study environment of a school."/>
+
+    <TextView
+        android:id="@+id/detail2"
+        android:layout_below="@id/detail1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="When a student is trying to solve any problem but he/she has no resource for getting good solution, schoolian will help for getting best solution in easiest way (Doesn’t matter on time and which place you are) for getting solution through the schoolian you need internet connection and a gadget"/>
+    <TextView
+        android:id="@+id/detail3"
+        android:layout_below="@id/detail2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="For more"
+        />
+    <TextView
+        android:id="@+id/detail4"
+        android:layout_toRightOf="@id/detail3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="www.schoolian.com"
+        android:textColor="#6495ed"
+        />
+</RelativeLayout>

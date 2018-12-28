@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Message_NevActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+
+    <Spinner
+        android:gravity="center"
+        android:id="@+id/simpleSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+    <Spinner
+        android:gravity="center"
+        android:id="@+id/SpinnTeacher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    android:layout_below="@+id/simpleSpinner"
+   android:visibility="gone"
+    />
+
+
+    <EditText
+        android:id="@+id/topicSubject"
+        android:layout_below="@+id/SpinnTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject or Topic"
+        android:layout_margin="10dp"
+
+        />
+    <EditText
+        android:id="@+id/messages"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:maxLength="250"
+        android:shadowRadius="50"
+        android:shadowDx="50"
+        android:shadowDy="50"
+        android:layout_margin="10dp"
+        android:background="@drawable/box_textview"
+        android:hint="Your Message"
+        android:layout_below="@+id/topicSubject"
+        android:inputType="text|textMultiLine"/>
+
+    <Button
+        android:id="@+id/butoon1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_send_black_24dp"
+        android:padding="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:onClick="sendMessage"/>
+</RelativeLayout>

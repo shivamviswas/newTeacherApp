@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#FFF"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainlayout"
+        >
+
+
+
+        <LinearLayout
+            android:id="@+id/mll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School ID"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/sidtt"/>
+
+            <EditText
+                android:id="@+id/stId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+                android:inputType="text"
+                android:drawableLeft="@drawable/ic_contacts_black_24dp"
+                android:drawablePadding="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="text"
+                android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/mobilett"/>
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:maxLength="10"
+                android:drawableLeft="@drawable/ic_format_list_numbered_black_24dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:textColor="#000"
+                android:inputType="textPassword"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/mll"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/otplayout"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERIFY MOBILE NUMBER"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP hes been sent to your mobile number, please enter it below"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/otpEnter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:hint="Enter OTP"
+            android:textColorHint="#000"
+            android:textColor="#000"
+            android:background="#e4dcdc"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLEASE DO NOT MISS OTP"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+        <Button
+            android:id="@+id/varifybutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="VERIFY OTP"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/otpbutton"
+            android:textColor="#ff0000"/>
+        <Button
+            android:id="@+id/resendbuttoon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="RESEND"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ff0000"
+            android:textColor="#fff"
+            android:onClick="resendOtp"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

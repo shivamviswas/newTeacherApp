@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Attendance_Sheet">
+
+    <RelativeLayout
+        android:id="@+id/rrlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom">
+        <TextView
+            android:id="@+id/z"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Name"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="45dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Attendance"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/z"
+            android:layout_marginLeft="115dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerattandance"
+            android:layout_below="@id/z"
+            android:scrollbars="vertical"
+            android:padding="10dp"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the student name here"
+            />
+
+        <EditText
+            android:id="@+id/attandance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:hint="Attendance"
+            />
+
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="Insert"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

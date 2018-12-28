@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUs_NevActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#ff0000"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:layout_marginTop="56dp"
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/contact_us"/>
+    <LinearLayout
+        android:id="@+id/llayout"
+        android:orientation="vertical"
+        android:layout_below="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textviewtext"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Contct Detail"
+            android:layout_margin="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textviewtext">
+
+            <ImageView
+                android:id="@+id/mail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_email_black_24dp"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/mail"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textviewmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textviewtext"
+                    android:layout_toEndOf="@+id/mail"
+                    android:layout_toRightOf="@+id/mail"
+                    android:text="wikavofficial@gmail.com"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/mail"
+                    android:text="Official" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textviewtext">
+
+            <ImageView
+                android:id="@+id/msg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_message_black_24dp"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/mail"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textviewmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textviewtext"
+                    android:layout_toEndOf="@+id/mail"
+                    android:layout_toRightOf="@+id/mail"
+                    android:text="(8559)838195"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/mail"
+                    android:text="Official" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

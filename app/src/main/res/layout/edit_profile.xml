@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/Etschool_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="57dp"
+                android:hint="School ID"
+                android:textColor="#000000"
+                android:editable="false"/>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/Etclss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Class"
+                android:textColor="#000000"
+                android:layout_weight=".25"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".56"
+                android:background="@color/colorPrimary"
+                android:text="Update"
+                android:textColor="#FFF"
+                style="bold"
+                android:onClick="classUP"
+                android:id="@+id/up1"
+                />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/Etsname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Student Name"
+                    android:layout_weight=".25"/>
+                <Button
+                    android:id="@+id/up2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".56"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    style="bold" android:onClick="NameUp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/Etlastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Last Name"
+                    android:layout_weight=".25"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".56"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    style="bold"
+                    android:onClick="LastName"
+                    android:id="@+id/up3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Etpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:inputType="textWebPassword"
+                    android:layout_weight=".25"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".56"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    android:onClick="passwordUp"
+                    style="bold"
+                    android:id="@+id/up4"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/Etnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:layout_weight=".25"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".56"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    android:onClick="mobileNum"
+                    style="bold"
+                    android:id="@+id/up5"
+                    />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/Etemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Email"
+                android:inputType="textWebEmailAddress"
+                android:layout_weight=".25"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".56"
+                android:background="@color/colorPrimary"
+                android:text="Update"
+                android:textColor="#FFF"
+                style="bold"
+                android:onClick="emailUp"
+                android:id="@+id/up6"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Etbio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="bio"
+                    android:inputType="textWebEmailAddress"
+                    android:layout_weight=".25"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".56"
+                    android:background="@color/colorPrimary"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    style="bold"
+                    android:onClick="bioUp"
+                    android:id="@+id/up7"
+                    />
+            </LinearLayout>
+             <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/upprog"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

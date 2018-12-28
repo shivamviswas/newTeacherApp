@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wikav.teahcer.teacherApp">
+
+    <uses-sdk
+        android:maxSdkVersion="27"
+        android:minSdkVersion="16"
+        android:targetSdkVersion="27" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Spash_Screen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:noHistory="true" />
+        <activity
+            android:name=".SubjectActivity_2"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".activities.AnimeActivity" />
+        <activity
+            android:name=".StudentRegistrationActivity"
+            android:label="Register"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HomeMenuActivity"
+            android:label="@string/title_activity_home_menu"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Message_NevActivity" />
+        <activity
+            android:name=".ContactUs_NevActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".MyPost_NevActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".Feedback_NevActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".Schoolina_NevActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".Help_NevActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".NotificationActivity"
+            android:noHistory="true" />
+        <activity android:name=".NewProfile" />
+        <activity android:name=".feedUpload" />
+        <activity
+            android:name=".EditProfile"
+            android:noHistory="true" />
+        <activity
+            android:name=".Confirm_password_Activity"
+            android:noHistory="true" />
+        <activity android:name=".ForgotPasword" />
+        <activity android:name=".submitOtp" />
+        <activity android:name=".NoInternetActivity"></activity>
+    </application>
+
+</manifest>

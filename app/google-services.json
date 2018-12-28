@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "585253957711",
+    "firebase_url": "https://schoolian-ef50a.firebaseio.com",
+    "project_id": "schoolian-ef50a",
+    "storage_bucket": "schoolian-ef50a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585253957711:android:e336c9db972f9423",
+        "android_client_info": {
+          "package_name": "com.wikav.teahcer.teacherApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585253957711-7dke4msqkv7hk857bq4bk1atuot0cba5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2wmG17P5noU4UtjC12Kqa6tASad4gLgQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
