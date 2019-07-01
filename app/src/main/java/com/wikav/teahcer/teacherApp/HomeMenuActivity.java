@@ -211,8 +211,7 @@ LinearLayout img;
                 Anime anime = new Anime();
 
                 anime.setName(jsonObject.getString("st_name"));
-//                        anime.setDescription(jsonObject.getString("description"));
-                anime.setRating(jsonObject.getString("stars"));
+
                 anime.setCategorie(jsonObject.getString("posts"));
                 anime.setId(jsonObject.getString("post_id"));
                 anime.setStudio(jsonObject.getString("profile_pic"));
@@ -277,6 +276,7 @@ LinearLayout img;
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 

@@ -166,7 +166,7 @@ public class feedUpload extends AppCompatActivity {
                 return params;
             }
         };
-
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
@@ -222,7 +222,7 @@ public class feedUpload extends AppCompatActivity {
                 return params;
             }
         };
-
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
@@ -281,7 +281,7 @@ public class feedUpload extends AppCompatActivity {
                 return params;
             }
         };
-
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
@@ -386,87 +386,10 @@ public class feedUpload extends AppCompatActivity {
             if (requestCode == 1) {
                 Bundle extras = data.getExtras();
                 thumbnail = (Bitmap) extras.get("data");
-                //mImageView.setImageBitmap(imageBitmap);
-
-
-//                File f = new File(Environment.getExternalStorageDirectory().toString());
-//
-//                for (File temp : f.listFiles()) {
-//
-//                    if (temp.getName().equals("temp.jpg")) {
-//
-//                        f = temp;
-//
-//                        break;
-//                    }
-//
-//                }
-//
-//                try {
-//
-//
-//
-//                    BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-//
-//
-//
-//                    bitmap = BitmapFactory.decodeFile(f.getAbsolutePath(),
-//
-//                            bitmapOptions);
-//
-//                    // UploadPicture(getId, getStringImage(bitmap));
-                viewImage.setVisibility(View.VISIBLE);
                 imageSelect.setVisibility(View.GONE);
                 imageButton.setVisibility(View.VISIBLE);
                 viewImage.setImageBitmap(thumbnail);
                 i=1;
-//
-//
-//
-//                    String path = android.os.Environment
-//
-//                            .getExternalStorageDirectory()
-//
-//                            + File.separator
-//
-//                            + "Phoenix" + File.separator + "default";
-//
-//                    f.delete();
-//
-//                    OutputStream outFile = null;
-//
-//                    File file = new File(path, String.valueOf(System.currentTimeMillis()) + ".jpg");
-//
-//                    try {
-//
-//                        outFile = new FileOutputStream(file);
-//
-//                        bitmap.compress(Bitmap.CompressFormat.JPEG, 85, outFile);
-//
-//                        outFile.flush();
-//
-//                        outFile.close();
-//
-//
-//                    } catch (FileNotFoundException e) {
-//
-//                        e.printStackTrace();
-//
-//                    } catch (IOException e) {
-//
-//                        e.printStackTrace();
-//
-//                    } catch (Exception e) {
-//
-//                        e.printStackTrace();
-//
-//                    }
-//
-//                } catch (Exception e) {
-//
-//                    e.printStackTrace();
-//
-//                }
 
             }
 

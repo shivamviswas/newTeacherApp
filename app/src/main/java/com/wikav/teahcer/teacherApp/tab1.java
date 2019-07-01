@@ -153,6 +153,7 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
 
@@ -162,8 +163,6 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
 
         dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, clsases);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
 
     }
@@ -229,6 +228,7 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
@@ -329,6 +329,7 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
 

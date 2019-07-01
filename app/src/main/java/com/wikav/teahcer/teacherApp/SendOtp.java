@@ -58,37 +58,14 @@ public class SendOtp {
 
 //final string
     mainUrl = sbPostData.toString();
-//    try {
-//        //prepare connection
-//        myURL = new URL(mainUrl);
-//        myURLConnection = myURL.openConnection();
-//        myURLConnection.connect();
-//        reader = new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
-//
-//        //reading response
-//        String response;
-//        while ((response = reader.readLine()) != null)
-//            //print response
-//
-//            Log.d("RESPONSE", "" + response);
-//
-//        Log.d("url", "" + mainUrl);
-//
-//
-//
-//        //finally close connection
-//        reader.close();
-//    } catch (IOException e) {
-//        e.printStackTrace();
-//
-//    }
+
         boolean value=true;
         try {
             URL url = new URL(mainUrl);
             HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
             urlConn.connect();
             System.out.println("work creating HTTP connection");
-            Log.d("url", "" + mainUrl);
+
             assertEquals(HttpURLConnection.HTTP_OK, urlConn.getResponseCode());
             value=true;
         } catch (IOException e) {

@@ -158,6 +158,7 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
 
@@ -227,6 +228,7 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
 
@@ -322,6 +324,7 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
 
