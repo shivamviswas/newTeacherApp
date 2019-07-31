@@ -35,12 +35,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
+
 //import com.android.volley.request.SimpleMultiPartRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,9 +55,9 @@ public class feedUpload extends AppCompatActivity {
     private EditText postText;
     SessionManger sessionManger;
     public String getId,scl_Id;
-    Bitmap bitmap,thumbnail;
+    Bitmap newImage,thumbnail;
     int i=0;
-    String uplod="http://schoolian.website/android/teacher/post_upload.php";
+    String uplod="https://schoolian.website/android/post_upload.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,24 +74,33 @@ public class feedUpload extends AppCompatActivity {
         getId=getid;
         scl_Id=scl;
 
+        Toast.makeText(getApplicationContext(), ""+scl_Id, Toast.LENGTH_SHORT).show();
+        imageButton=findViewById(R.id.imageButton);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewImage.setImageBitmap(null);
+                viewImage.setVisibility(View.GONE);
                 imageSelect.setVisibility(View.VISIBLE);
                 imageButton.setVisibility(View.VISIBLE);
                 i=0;
             }
         });
 
+        imageSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseImage();
+            }
+        });
 
         uploadBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
 
             public void onClick(View v) {
-                final String et=postText.getText().toString();
+                final String et=postText.getText().toString().trim();
 
                 if(et.isEmpty()&&i==0)
                 {
@@ -101,10 +114,10 @@ public class feedUpload extends AppCompatActivity {
 
                     } else if (et.isEmpty() && i == 1) {
                         // Toast.makeText(feedUpload.this, "et worrk", Toast.LENGTH_SHORT).show();
-                        UploadOnlyPicture(getId, getStringImage(thumbnail));
+                        UploadOnlyPicture(getId, getStringImage(newImage));
                     } else {
                         //Toast.makeText(feedUpload.this, "waorklslsls", Toast.LENGTH_SHORT).show();
-                        UploadWithPicture(getId, et, getStringImage(thumbnail));
+                        UploadWithPicture(getId, et, getStringImage(newImage));
                     }
 
                 }
@@ -311,73 +324,45 @@ public class feedUpload extends AppCompatActivity {
     }
 
 
-    public void chooseImage(View view) {
-
-
-        final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
-
-
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(feedUpload.this);
-
-        builder.setTitle("Add Photo!");
-
-        builder.setItems(options, new DialogInterface.OnClickListener() {
-
-            @Override
-
-            public void onClick(DialogInterface dialog, int item) {
-
-                if (options[item].equals("Take Photo"))
-
-                {
-
-//                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//
-//                    File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-//
-//                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-//
-//                    startActivityForResult(intent, 1);
-
-                    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                        startActivityForResult(takePictureIntent, 1);
-                    }
-
-                }
-
-                else if (options[item].equals("Choose from Gallery"))
-
-                {
-
-                    Intent intent = new   Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                    startActivityForResult(intent, 2);
-
-
-                }
-
-                else if (options[item].equals("Cancel")) {
-
-                    dialog.dismiss();
-
-                }
-
-            }
-
-        });
-
-        builder.show();
-
+    public void chooseImage() {
+        CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .start(this);
     }
 
 
 
     @SuppressLint("LongLogTag")
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+                Uri resultUri = result.getUri();
+                Toast.makeText(getApplicationContext(), "Okk", Toast.LENGTH_SHORT).show();
+
+                try {
+                    newImage = MediaStore.Images.Media.getBitmap(getContentResolver(), resultUri);
+                    viewImage.setVisibility(View.VISIBLE);
+                    viewImage.setImageBitmap(newImage);
+                    i=1;
+                    imageButton.setVisibility(View.VISIBLE);
+                    imageSelect.setVisibility(View.GONE);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Exception error = result.getError();
+                Log.i("Photo",error.toString());
+            }
+        }
+    }
+}
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -427,5 +412,5 @@ public class feedUpload extends AppCompatActivity {
         }
 
     }
+*/
 
-}

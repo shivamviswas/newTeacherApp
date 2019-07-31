@@ -395,12 +395,8 @@ public class tab2 extends Fragment implements AdapterView.OnItemSelectedListener
         if (spinner.getId() == R.id.spinnerClass) {
             itemcls = parent.getItemAtPosition(position).toString();
             if (!itemcls.equals("Select Class")) {
-                // shocoments(sclid,item);
-clear();
-               // lstAnime.clear();
-              //  Toast.makeText(getActivity(), ""+lstAnime, Toast.LENGTH_SHORT).show();
+                clear();
                 setSeubject(itemcls);
-
                /// Toast.makeText(getActivity(), itemcls, Toast.LENGTH_LONG).show();
             }
         } else if (spinner.getId() == R.id.spinnerTest) {
@@ -468,6 +464,7 @@ clear();
 
             }
         };
+        stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }

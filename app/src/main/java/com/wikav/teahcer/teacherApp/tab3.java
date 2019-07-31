@@ -110,12 +110,13 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
         StringRequest stringRequest = new StringRequest(Request.Method.POST, JSON_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Log.d("Shyam",response);
                 try {
 
                     JSONObject jsonObject1 = new JSONObject(response);
                     String success = jsonObject1.getString("success");
                     JSONArray jsonArray = jsonObject1.getJSONArray("subjects");
-
+                    lstAnime.clear();
                     if (success.equals("1")) {
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -270,6 +271,7 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
                 object.put("SchoolId", sclid);
                 object.put("sub_id", att.getSubjectId());
                 object.put("syllabus", att.getSyllabusComplete());
+                object.put("totalChapter", att.getTotalSyllabus());
                 array.put(object);
 
             } catch (JSONException e) {

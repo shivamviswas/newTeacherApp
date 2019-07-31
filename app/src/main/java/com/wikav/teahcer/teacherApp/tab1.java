@@ -171,6 +171,7 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
 
 
     private void shocoments(final String posId, final String classname) {
+
         progressBar.setVisibility(View.VISIBLE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
@@ -297,9 +298,11 @@ public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener
                     JSONObject jsonObject1 = new JSONObject(response);
                     String success = jsonObject1.getString("success");
                     if (success.equals("1")) {
+                        Log.d("Attend",array.toString());
                         Toast.makeText(getActivity(), "Attendance Submitted", Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(getActivity(),HomeMenuActivity.class);
                         startActivity(intent);
+
                     }
 
 

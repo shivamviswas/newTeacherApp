@@ -153,7 +153,7 @@ public class Login extends AppCompatActivity {
 
             }
         };
-
+stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(5000,

@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".9"
                 android:textColor="#000"
-                android:text="           Percentage"
+                android:text="           Total Chapters"
                 android:textAlignment="center"
                 android:maxLines="1"
 

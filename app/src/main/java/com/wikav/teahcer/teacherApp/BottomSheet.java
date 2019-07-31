@@ -38,7 +38,7 @@ public class BottomSheet extends BottomSheetDialogFragment {
     EditText name,lastname,email,phone,bio,passowrd;
     ProgressBar progressBar;
 
-    final String Url="http://schoolian.website/android/updateProfile.php";
+    final String Url="http://schoolian.website/android/teacher/updateProfile.php";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -97,7 +97,15 @@ progressBar=v.findViewById(R.id.upprog);
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
                             JSONArray jsonArray = jsonObject.getJSONArray("update");
-
+/*          $index['name'] = $row['teacher_name'];
+                    $index['email'] = $row['t_email'];
+                    $index['sid'] = $row['tid'];
+                    $index['phone'] = $row['t_mobile'];
+                    $index['bio'] = $row['bio'];
+                    $index['photo'] = $row['profile_pic'];
+                    $index['scl_id'] = $row['scl_id'];
+                    $index['pass'] = $row['password'];
+                    $index['sclPic'] = $ro['sprofile'];*/
 
                             if (success.equals("1")){
                                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -109,9 +117,6 @@ progressBar=v.findViewById(R.id.upprog);
                                     String sid = object.getString("sid").trim();
                                     String photo = object.getString("photo").trim();
                                     String scl_id = object.getString("school_id").trim();
-                                    String classs = object.getString("class").trim();
-                                    String lastname = object.getString("lastname").trim();
-                                    String sclname = object.getString("scl_name").trim();
                                     String phone = object.getString("phone").trim();
                                     String pass = object.getString("pass").trim();
 //                                    sessionManger.editor.clear();

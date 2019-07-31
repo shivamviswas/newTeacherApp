@@ -125,6 +125,25 @@ public class AdapterForSyllabus extends RecyclerView.Adapter<AdapterForSyllabus.
                // notifyDataSetChanged();
             }
         });
+        holder.totalsyllabus.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                myData.get(position).setTotalSyllabus(holder.totalsyllabus.getText().toString());
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                myData.get(position).setTotalSyllabus(holder.totalsyllabus.getText().toString());
+
+            }
+        });
 
 
     }
@@ -136,8 +155,8 @@ public class AdapterForSyllabus extends RecyclerView.Adapter<AdapterForSyllabus.
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView subject,totalsyllabus ;
-        EditText setSyllbus;
+        TextView subject;
+        EditText setSyllbus,totalsyllabus ;
         Button plus,mines;
 
 
