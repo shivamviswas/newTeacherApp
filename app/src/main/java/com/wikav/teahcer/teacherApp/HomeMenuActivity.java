@@ -95,6 +95,7 @@ LinearLayout img;
         setContentView(R.layout.activity_home_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("MyApp");
 
         sessionManger = new SessionManger(this);
         sessionManger.checkLogin();

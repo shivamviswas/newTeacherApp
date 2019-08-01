@@ -420,7 +420,7 @@ public class tab2 extends Fragment implements AdapterView.OnItemSelectedListener
                     JSONObject jsonObject1 = new JSONObject(response);
                     String success = jsonObject1.getString("success");
                     JSONArray jsonArray = jsonObject1.getJSONArray("subject");
-
+                        Subject.clear();
                     if (success.equals("1")) {
 
                         for (int i = 0; i < jsonArray.length(); i++) {
