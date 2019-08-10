@@ -33,9 +33,9 @@ import java.util.Map;
 public class Message_NevActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String[] bankNames={"Select","Principle","Teacher"};
     List<String> teacher;
-    final String JSON_URL="http://schoolian.website/android/getTeacherMsg.php";
-    final String JSON_TECHER="http://schoolian.website/android/sendToTeacher.php";
-    final String JSON_ADMIN="http://schoolian.website/android/sendToTeacher.php";
+    final String JSON_URL="http://schoolian.in/android/getTeacherMsg.php";
+    final String JSON_TECHER="http://schoolian.in/android/sendToTeacher.php";
+    final String JSON_ADMIN="http://schoolian.in/android/sendToTeacher.php";
 
     String selectedSubject =null;
     ArrayAdapter<String> dataAdapter;

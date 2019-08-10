@@ -34,7 +34,7 @@ int i;
     ProgressBar progressBar;
     TextInputLayout hint;
     Button send_otp;
-    private final String uplod="http://schoolian.website/android/sendOtp.php";
+    private final String uplod="http://schoolian.in/android/sendOtp.php";
 
    // SendOtp Otpsend;
     @Override

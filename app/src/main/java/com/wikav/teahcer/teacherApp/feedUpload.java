@@ -57,7 +57,7 @@ public class feedUpload extends AppCompatActivity {
     public String getId,scl_Id;
     Bitmap newImage,thumbnail;
     int i=0;
-    String uplod="https://schoolian.website/android/teacher/post_upload.php";
+    String uplod="https://schoolian.in/android/teacher/post_upload.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

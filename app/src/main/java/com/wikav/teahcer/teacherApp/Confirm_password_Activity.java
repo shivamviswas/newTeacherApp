@@ -30,7 +30,7 @@ public class Confirm_password_Activity extends AppCompatActivity {
    TextInputLayout hint;
    ProgressBar progressBar;
    Button submit_pass;
-    private final String uplod="http://schoolian.website/android/sendOtp.php";
+    private final String uplod="http://schoolian.in/android/sendOtp.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );

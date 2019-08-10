@@ -47,8 +47,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext ;
     private List<Anime> mData ;
     RequestOptions option;
-    private final String URL_PRODUCTS = "https://schoolian.website/android/getStar.php";
-    //String URL_PRODUCTS="https://schooli.000webhostapp.com/android/getStar.php" https://schoolian.website/android/getPostData.php;
+    private final String URL_PRODUCTS = "https://schoolian.in/android/getStar.php";
+    //String URL_PRODUCTS="https://schooli.000webhostapp.com/android/getStar.php" https://schoolian.in/android/getPostData.php;
     int status=1,star=1,getStatus;
     String postId,Sid,valueOfstar;
     private List<Anime> lstAnime ;

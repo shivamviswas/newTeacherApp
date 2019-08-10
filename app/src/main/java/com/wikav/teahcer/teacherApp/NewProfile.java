@@ -48,7 +48,7 @@ public class NewProfile extends AppCompatActivity {
     String getId;
     RequestBuilder requestBuilder;
    // private final String uplod="http://192.168.43.188/android/upload.php";
-    private final String uplod="http://schoolian.website/android/teacher/upload.php";
+    private final String uplod="http://schoolian.in/android/teacher/upload.php";
 
 
 

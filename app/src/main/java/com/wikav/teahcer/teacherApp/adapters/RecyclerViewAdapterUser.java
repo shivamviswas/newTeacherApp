@@ -49,7 +49,7 @@ public class RecyclerViewAdapterUser extends RecyclerView.Adapter<RecyclerViewAd
     private List<Animes> mData ;
     RequestOptions option;
     SessionManger sessionManger;
-    private final String URL_PRODUCTS = "https://schoolian.website/android/getStar.php";
+    private final String URL_PRODUCTS = "https://schoolian.in/android/getStar.php";
     //String URL_PRODUCTS="https://schooli.000webhostapp.com/android/getStar.php";
     int status=1,star=1,getStatus;
     String postId,valueOfstar;

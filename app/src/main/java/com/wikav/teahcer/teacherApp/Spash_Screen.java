@@ -52,7 +52,7 @@ public class Spash_Screen extends AppCompatActivity {
     BroadcastReceiver broadcastReceiver;
 
     boolean isUpdateAvailable =false;
-    String Url="https://schoolian.website/android/getAppUpdate.php";
+    String Url="https://schoolian.in/android/getAppUpdate.php";
     public  static final int PERMISSIONS_MULTIPLE_REQUEST = 123;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

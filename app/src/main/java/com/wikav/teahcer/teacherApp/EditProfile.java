@@ -30,7 +30,7 @@ public class EditProfile extends AppCompatActivity {
     private ProgressBar progressBar;
     private SessionManger sessionManger;
     Button up1,up2,up3,up4,up5,up6,up7;
-    private String sname,slastName,spassword,sclassUP,sschool,smobile,semail,bio,id,Url="http://schoolian.website/android/updateProfile.php";
+    private String sname,slastName,spassword,sclassUP,sschool,smobile,semail,bio,id,Url="http://schoolian.in/android/updateProfile.php";
 
 
     @Override

@@ -39,9 +39,9 @@ import java.util.Map;
 public class tab1 extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    private final String JSON_URL = "https://schoolian.website/android/teacher/getClasses.php";
-    private final String URL = "https://schoolian.website/android/teacher/getStudentWithClass.php";
-    private final String URL2 = "https://schoolian.website/android/teacher/attendence.php";
+    private final String JSON_URL = "https://schoolian.in/android/teacher/getClasses.php";
+    private final String URL = "https://schoolian.in/android/teacher/getStudentWithClass.php";
+    private final String URL2 = "https://schoolian.in/android/teacher/attendence.php";
     // private final String JSON_URL = "https://192.168.43.188/web/android/teacher/getClasses.php";
     // private final String URL = "https://192.168.43.188/web/android/teacher/getStudentWithClass.php";
 

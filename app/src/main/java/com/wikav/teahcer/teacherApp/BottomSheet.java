@@ -38,7 +38,7 @@ public class BottomSheet extends BottomSheetDialogFragment {
     EditText name,lastname,email,phone,bio,passowrd;
     ProgressBar progressBar;
 
-    final String Url="http://schoolian.website/android/teacher/updateProfile.php";
+    final String Url="http://schoolian.in/android/teacher/updateProfile.php";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

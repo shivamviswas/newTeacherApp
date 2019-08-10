@@ -37,8 +37,8 @@ public class StudentRegistrationActivity extends AppCompatActivity {
     LinearLayout linearLayout;
     RelativeLayout relativeLayout;
     TextView mobileTT,sidTT;
-    private final String Url="https://schoolian.website/android/teacher/checking.php";
-    private final String Url2="https://schoolian.website/android/teacher/teacherRegister.php";
+    private final String Url="https://schoolian.in/android/teacher/checking.php";
+    private final String Url2="https://schoolian.in/android/teacher/teacherRegister.php";
     boolean i=false;
     int Black = Color.parseColor("#000000"),otpStore;
     String Name,Mobiles,Sid,Pass,otpValue;

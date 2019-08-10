@@ -45,9 +45,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AnimeActivity extends AppCompatActivity {
 
-    private final String JSON_URL = "https://schoolian.website/android/getComments.php" ;
-    private final String JSON_URL2 ="https://schoolian.website/android/comments.php" ;
-    private final String Delete_URL ="https://schoolian.website/android/deletePost.php" ;
+    private final String JSON_URL = "https://schoolian.in/android/getComments.php" ;
+    private final String JSON_URL2 ="https://schoolian.in/android/comments.php" ;
+    private final String Delete_URL ="https://schoolian.in/android/deletePost.php" ;
     EditText sendCom;
 
     SessionManger sessionManger;

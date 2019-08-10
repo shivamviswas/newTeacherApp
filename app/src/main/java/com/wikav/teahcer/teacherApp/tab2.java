@@ -42,10 +42,10 @@ import java.util.Map;
 
 public class tab2 extends Fragment implements AdapterView.OnItemSelectedListener {
     private RecyclerView.LayoutManager layoutManager;
-    private final String JSON_URL = "https://schoolian.website/android/teacher/getClasses.php";
-    private final String JSON_URL2 = "https://schoolian.website/android/teacher/getSubject.php";
-    private final String URL = "https://schoolian.website/android/teacher/getStudentWithClass.php";
-    private final String URL2 = "https://schoolian.website/android/teacher/marks.php";
+    private final String JSON_URL = "https://schoolian.in/android/teacher/getClasses.php";
+    private final String JSON_URL2 = "https://schoolian.in/android/teacher/getSubject.php";
+    private final String URL = "https://schoolian.in/android/teacher/getStudentWithClass.php";
+    private final String URL2 = "https://schoolian.in/android/teacher/marks.php";
     // private final String URL = "https://192.168.43.188/web/android/teacher/getStudentWithClass.php";
 
     ArrayAdapter<String> dataAdapter;

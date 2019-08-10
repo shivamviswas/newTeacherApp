@@ -43,7 +43,7 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
 
     String selectedClassId=null;
     ArrayAdapter<String> dataAdapter;
-    private final String JSON_URL_GET_Class = "https://schoolian.website/android/teacher/getClasses.php";
+    private final String JSON_URL_GET_Class = "https://schoolian.in/android/teacher/getClasses.php";
     View view;
     FloatingActionButton button;
     // Context
@@ -58,8 +58,8 @@ public class tab3 extends Fragment implements AdapterView.OnItemSelectedListener
     AdapterForSyllabus adaptorRecycler;
     ProgressBar progressBar;
 
-    private final String JSON_URL = "https://schoolian.website/android/teacher/getSyl.php";
-    private final String URL2 = "https://schoolian.website/android/teacher/syllabus.php";
+    private final String JSON_URL = "https://schoolian.in/android/teacher/getSyl.php";
+    private final String URL2 = "https://schoolian.in/android/teacher/syllabus.php";
 
     @Override
     public void onAttach(Activity activity) {

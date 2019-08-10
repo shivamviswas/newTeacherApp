@@ -85,7 +85,7 @@ LinearLayout img;
     BottomNavigationView bottomNavigationView;
     SessionManger sessionManger;
     // private final String URL_PRODUCTS = "http://schooli.000webhostapp.com/android/getPostData.php";
-    private final String URL_PRODUCTS = "https://schoolian.website/android/getPostData.php";
+    private final String URL_PRODUCTS = "https://schoolian.in/android/getPostData.php";
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override

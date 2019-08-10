@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
     EditText editTextemail, editTextpassword;
     TextInputLayout phoneInput,passInput;
     private ProgressBar progressBar;
-    private final String URL = "https://schoolian.website/android/teacher/TeacherLogin.php";
+    private final String URL = "https://schoolian.in/android/teacher/TeacherLogin.php";
     SessionManger sessionManger;
   //  TextInputLayout pass_hint,email_hint;
 //    private final String URL = "https://192.168.43.188/web/android/teacher/Teacherlogin.php";

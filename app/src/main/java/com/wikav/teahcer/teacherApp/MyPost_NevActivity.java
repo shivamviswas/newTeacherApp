@@ -42,7 +42,7 @@ public class MyPost_NevActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     SessionManger sessionManger;
-    private final String URL_PRODUCTS = "http://schoolian.website/android/getPostData.php";
+    private final String URL_PRODUCTS = "http://schoolian.in/android/getPostData.php";
     //private final String URL_PRODUCTS = "http://192.168.43.188/android/getUserPost.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

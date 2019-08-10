@@ -34,7 +34,7 @@ public class submitOtp extends AppCompatActivity {
     ProgressBar progressBar;
     TextInputLayout hint;
     Button submit_otp;
-    private final String uplod="https://schoolian.website/android/sendOtp.php";
+    private final String uplod="https://schoolian.in/android/sendOtp.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
